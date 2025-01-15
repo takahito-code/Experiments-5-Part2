@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-width=1.0">
+        <link rel="stylesheet" href="style.css">
+        <title>Experiments 5 Part2</title>
+    </head>
+    <body>
+        <h1>Experiments 5 Part2</h1>
+        <div id="container1">
+            <h2>Random Quote Generator</h2>
+            <div id="quoteDisplay">Quote will appear here.</div>
+            <div class="controls">
+                <button id="nextQuote">Next Quote</button>
+            </div>
+            <div class="controls">
+                <input type="text" id="newQuote" placeholder="Add a new quote.">
+                <button id="addQuote">Add Quote</button>
+            </div>
+        </div>
+        <div id="container2">
+            <h2>Simple Slideshow</h2>
+            <div class="slideshow-container">
+                <img id="slideshowImage" src="images/pexels-burst-545026.jpg" alt="slideshow">
+            </div>
+            <button id="prevButton">Previous</button>
+            <button id="nextButton">Next</button>
+        </div>
+        <div id="container3">
+            <h2>Simple Countdown Timer</h2>
+            <div id="timerDisplay">10</div>
+            <button id="startButton">Start</button>
+            <button id="stopButton">Stop</button>
+        </div>
+        <div id="container4">
+            <h2>Simple 3-Question Quiz</h2>
+            <div class="question" id="questionDisplay">Question will appear here.</div>
+            <div id="choicesContainer"></div>
+        </div>
+        <div id="container5">
+            <h2>Number List Generator</h2>
+            <input type="number" id="start" placeholder="Start">
+            <input type="number" id="end" placeholder="end">
+            <input type="number" id="step" placeholder="Step">
+            <button id="generateButton">Generate</button>
+            <ul id="numberList"></ul>
+            <div id="description"></div>
+        </div>
+        <script src="script.js"></script>
+    </body>
+</html>
