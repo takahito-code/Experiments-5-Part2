@@ -4,12 +4,13 @@ const defaultQuotes = [ "If you can dream it, you can do it.",
     "No challenge, no growth.",
     "Effort never betrays you."];
 
-    let quotes = JSON.parse(localStorage.getItem("quotes")) || defaultQuotes;
+    let quotes = JSON.parse(localStorage.getItem("quotes")) || [...defaultQuotes];
 
     const quoteDisplay = document.getElementById("quoteDisplay");
     const nextQuoteButton = document.getElementById("nextQuote");
     const newQuoteInput = document.getElementById("newQuote");
     const addQuoteButton = document.getElementById("addQuote");
+    const clearQuotesButton = document.getElementById("clearQuotes");
 
     function displayRandomQuote() {
         const randomIndex = Math.floor(Math.random() * quotes.length);
@@ -28,8 +29,18 @@ const defaultQuotes = [ "If you can dream it, you can do it.",
         }
     }
 
+    function clearAddedQuotes() {
+        if(confirm("Are you sure you want to delete all new quotes?")){
+            quotes = [...defaultQuotes];
+            localStorage.removeItem("quotes");
+            displayRandomQuote();
+            alert("All new quotes have been deleted. Displaying default quotes.");
+        }
+    }
+
     nextQuoteButton.addEventListener("click", displayRandomQuote);
     addQuoteButton.addEventListener("click", addNewQuote);
+    clearQuotesButton.addEventListener("click", clearAddedQuotes);
 
     displayRandomQuote();
 
